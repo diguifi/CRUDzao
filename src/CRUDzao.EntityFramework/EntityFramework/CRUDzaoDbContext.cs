@@ -1,13 +1,16 @@
 ﻿using System.Data.Common;
+using System.Data.Entity;
 using Abp.Zero.EntityFramework;
 using CRUDzao.Authorization.Roles;
 using CRUDzao.Authorization.Users;
+using CRUDzao.Entities.Client;
 using CRUDzao.MultiTenancy;
 
 namespace CRUDzao.EntityFramework
 {
     public class CRUDzaoDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
+        public IDbSet<Client> Clients { get; set; }
         //TODO: Define an IDbSet for your Entities...
 
         /* NOTE: 
