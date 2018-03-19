@@ -200,6 +200,8 @@
     <Compile Include="Configuration\AppSettingProvider.cs" />
     <Compile Include="Editions\EditionManager.cs" />
     <Compile Include="Entities\Client\Client.cs" />
+    <Compile Include="Entities\Client\ClientManager.cs" />
+    <Compile Include="Entities\Client\IClientManager.cs" />
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />
     <Compile Include="MultiTenancy\TenantManager.cs" />

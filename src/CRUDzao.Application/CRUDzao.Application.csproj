@@ -192,6 +192,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\Dtos\CreateClientInput.cs" />
+    <Compile Include="Clients\Dtos\CreateClientOutput.cs" />
+    <Compile Include="Clients\Dtos\GetAllClientsItem.cs" />
+    <Compile Include="Clients\Dtos\GetAllClientsOutput.cs" />
+    <Compile Include="Clients\Dtos\GetClientByIdOutput.cs" />
+    <Compile Include="Clients\Dtos\UpdateClientInput.cs" />
+    <Compile Include="Clients\Dtos\UpdateClientOutput.cs" />
+    <Compile Include="Clients\IClientAppService.cs" />
     <Compile Include="CRUDzaoApplicationModule.cs" />
     <Compile Include="CRUDzaoAppServiceBase.cs" />
     <Compile Include="Authorization\Accounts\AccountAppService.cs" />
@@ -240,6 +248,7 @@
       <Name>CRUDzao.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
