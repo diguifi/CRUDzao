@@ -25,8 +25,17 @@
     <text name="UserName" value="Nome de usuário" />
     <text name="Name" value="Nome" />
     <text name="Surname" value="Sobrenome" />
+    <text name="City" value="Cidade" />
+    <text name="Address" value="Endereço" />
+    <text name="Number" value="Número" />
+    <text name="Email" value="Email" />
+    <text name="Phone" value="Telefone" />
+    <text name="Birth" value="Nascimento" />
+    <text name="Height" value="Altura" />
+    <text name="Weight" value="Peso" />
     <text name="EmailAddress" value="Endereço de e-mail" />
 
+    <text name="Clients" value="Clientes" />
     <text name="Tenants" value="Tenants" />
     <text name="SavedSuccessfully" value="Salvo com sucesso" />
     <text name="CreateNewTenant" value="Crie um novo tenant" />

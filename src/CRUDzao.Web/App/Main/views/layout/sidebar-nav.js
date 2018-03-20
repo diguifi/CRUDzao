@@ -12,6 +12,7 @@
                 createMenuItem(App.localize("Users"), "Pages.Users", "people", "users"),
                 createMenuItem(App.localize("Roles"), "Pages.Roles", "local_offer", "roles"),
                 createMenuItem(App.localize("About"), "", "info", "about"),
+                createMenuItem(App.localize("Clients"), "", "people", "clients"),
 
                 createMenuItem(App.localize("MultiLevelMenu"), "", "menu", "", [
                     createMenuItem("ASP.NET Boilerplate", "", "", "", [

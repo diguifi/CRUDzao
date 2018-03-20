@@ -7,8 +7,16 @@
             vm.clients = [];
 
             function getClients() {
-                clientService.getAll({}).then(function (result) {
-                    vm.clients = result.data.items;
+                clientService.getAllClients({}).then(function (result) {
+                    vm.clients = result.data.clients;
+                });
+            }
+
+            vm.openClientCreationModal = function () {
+                var modalInstance = $uibModal.open({
+                    templateUrl: '/App/Main/views/roles/createModal.cshtml',
+                    controller: 'app.views.users.createModal as vm',
+                    backdrop: 'static'
                 });
             }
 

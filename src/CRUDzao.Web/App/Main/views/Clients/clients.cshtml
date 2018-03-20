@@ -3,10 +3,10 @@
         <div class="card main-content">
             <div class="header">
                 <h2>
-                    @L("Roles")
+                    @L("Clients")
                 </h2>
                 <ul class="header-dropdown m-r--5">
-                    <i class="fa fa-spin fa-spinner" ng-if="isTableLoading"></i>
+                    <i class="fa fa-spin fa-spinner" ng-if="vm.isTableLoading"></i>
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="material-icons">more_vert</i>
@@ -21,15 +21,16 @@
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
-                            <th>@L("RoleName")</th>
-                            <th>@L("DisplayName")</th>
-                            <th>@L("Actions")</th>
+                            <th>@L("Name")</th>
+                            <th>@L("Surname")</th>
+                            <th>@L("Email")</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr ng-repeat="client in vm.clients">
-                            <td>{{client.name}}</td>
-                            <td>{{client.displayName}}</td>
+                            <td>{{client.firstName}}</td>
+                            <td>{{client.lastName}}</td>
+                            <td>{{client.email}}</td>
                             <td class="dropdown">
                                 <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <i class="material-icons">menu</i>
@@ -42,7 +43,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button type="button" data-toggle="modal" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" ng-click="vm.openRoleCreationModal()">
+                <button type="button" data-toggle="modal" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" ng-click="vm.openClientCreationModal()">
                     <i class="material-icons">add</i>
                 </button>
             </div>
