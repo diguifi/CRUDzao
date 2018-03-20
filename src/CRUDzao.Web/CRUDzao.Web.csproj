@@ -457,6 +457,7 @@
     </Content>
     <Content Include="App\Main\services\appSession.js" />
     <Content Include="App\Main\views\Clients\clients.js" />
+    <Content Include="App\Main\views\Clients\createModal.js" />
     <Content Include="App\Main\views\directives\autoFocus.js" />
     <Content Include="App\Main\views\directives\enterKey.js" />
     <Content Include="App\Main\views\layout\layout.js" />
@@ -2806,6 +2807,7 @@
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
     <Content Include="App\Main\views\Clients\clients.cshtml" />
+    <Content Include="App\Main\views\Clients\createModal.cshtml" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">

@@ -27,6 +27,7 @@
     <text name="Surname" value="Sobrenome" />
     <text name="City" value="Cidade" />
     <text name="Address" value="Endereço" />
+    <text name="AddressDescription" value="Bairro, Rua" />
     <text name="Number" value="Número" />
     <text name="Email" value="Email" />
     <text name="Phone" value="Telefone" />
@@ -39,6 +40,7 @@
     <text name="Tenants" value="Tenants" />
     <text name="SavedSuccessfully" value="Salvo com sucesso" />
     <text name="CreateNewTenant" value="Crie um novo tenant" />
+    <text name="CreateNewClient" value="Novo cliente" />
     <text name="AdminEmailAddress" value="Endereço de e-mail administrador" />
     <text name="Save" value="Salvar" />
     <text name="Cancel" value="Cancelar" />

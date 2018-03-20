@@ -14,7 +14,7 @@
 
             vm.openClientCreationModal = function () {
                 var modalInstance = $uibModal.open({
-                    templateUrl: '/App/Main/views/roles/createModal.cshtml',
+                    templateUrl: '/App/Main/views/clients/createModal.cshtml',
                     controller: 'app.views.users.createModal as vm',
                     backdrop: 'static'
                 });
