@@ -55,6 +55,14 @@ namespace CRUDzao.Web
                         url: "#/about",
                         icon: "fa fa-info"
                         )
+                )
+                .AddItem(
+                    new MenuItemDefinition(
+                        "Clients",
+                        new LocalizableString("Clients", CRUDzaoConsts.LocalizationSourceName),
+                        url: "#/clients",
+                        icon: "fa fa-users"
+                        )
                 );
         }
 

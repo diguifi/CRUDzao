@@ -192,6 +192,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\ClientAppService.cs" />
     <Compile Include="Clients\Dtos\CreateClientInput.cs" />
     <Compile Include="Clients\Dtos\CreateClientOutput.cs" />
     <Compile Include="Clients\Dtos\GetAllClientsItem.cs" />

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CRUDzao.Clients
 {
-    [DependsOn(typeof(CRUDzaoCoreModule), typeof(AbpAutoMapperModule))]
+    //[DependsOn(typeof(CRUDzaoCoreModule), typeof(AbpAutoMapperModule))]
     public class ClientAppService : IClientAppService
     {
         private IClientManager _clientManager;
