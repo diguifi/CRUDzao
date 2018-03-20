@@ -7,6 +7,8 @@ using Abp.Domain.Repositories;
 using Abp.Modules;
 using CRUDzao.Authorization.Roles;
 using CRUDzao.Authorization.Users;
+using CRUDzao.Clients.Dtos;
+using CRUDzao.Entities.Client;
 using CRUDzao.Roles.Dto;
 using CRUDzao.Users.Dto;
 
@@ -17,6 +19,16 @@ namespace CRUDzao
     {
         public override void PreInitialize()
         {
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(config =>
+            {
+                config.CreateMap<CreateClientInput, Client>()
+                .ConstructUsing(x => new Client(x.FirstName, x.LastName, x.City, x.Adress,
+                x.Number, x.Email, x.Phone, x.Birth, x.Height, x.Weight));
+
+                config.CreateMap<UpdateClientInput, Client>()
+                .ConstructUsing(x => new Client(x.FirstName, x.LastName, x.City, x.Adress,
+                x.Number, x.Email, x.Phone, x.Birth, x.Height, x.Weight));
+            });
         }
 
         public override void Initialize()

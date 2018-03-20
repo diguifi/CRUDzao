@@ -24,5 +24,20 @@ namespace CRUDzao.Entities.Client
         {
             this.CreationTime = DateTime.Now;
         }
+
+        public Client(string firstName, string lastName, string city, string adress, int number, string email, int phone, DateTime birth, float height, float weight)
+        {
+            this.CreationTime = DateTime.Now;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.City = city;
+            this.Adress = adress;
+            this.Number = number;
+            this.Email = email;
+            this.Phone = phone;
+            this.Birth = birth;
+            this.Height = height;
+            this.Weight = weight;
+    }
     }
 }
