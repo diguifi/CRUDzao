@@ -4,22 +4,10 @@
         function ($scope, $uibModalInstance, clientService) {
             var vm = this;
 
-            vm.role = {};
-            vm.permissions = [];
+            vm.client = {};
 
             vm.save = function () {
-                var assignedPermissions = [];
-                for (var i = 0; i < vm.permissions.length; i++) {
-                    var permission = vm.permissions[i];
-                    if (!permission.isAssigned) {
-                        continue;
-                    }
-
-                    assignedPermissions.push(permission.name);
-                }
-                
-                vm.role.permissions = assignedPermissions;
-                roleService.create(vm.role)
+                clientService.createClient(vm.client)
                     .then(function () {
                         abp.notify.info(App.localize('SavedSuccessfully'));
                         $uibModalInstance.close();
@@ -30,7 +18,6 @@
                 $uibModalInstance.dismiss({});
             };
 
-            getPermissions();
         }
     ]);
 })();
