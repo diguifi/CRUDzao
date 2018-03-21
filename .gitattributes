@@ -1,0 +1,3 @@
++*.cshml linguist-language=html
++*.cs linguist-language=C#
++*.js linguist-language=JavaScript
