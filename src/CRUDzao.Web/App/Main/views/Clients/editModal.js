@@ -1,42 +1,31 @@
 ﻿(function () {
-    angular.module('app').controller('app.views.clients.editModal', [
+    angular
+        .module('app')
+        .controller('app.views.clients.editModal', [
         '$scope', '$uibModalInstance', 'abp.services.app.client', 'id',
-        function ($scope, $uibModalInstance, userService, id) {
+        function ($scope, $uibModalInstance, clientService, id) {
             var vm = this;
 
             vm.client = {
                 isActive: true
             };
 
-            vm.clients = [];
+            vm.client = [];
 
             var init = function () {
-                userService.GetById(id)
+                clientService.getById(id)
                     .then(function (result) {
-                        vm.roles = result.data.items;
+                        vm.client = result.data;
 
-                        userService.get({ id: id })
+                        clientService.get(id)
                             .then(function (result) {
-                                vm.user = result.data;
-                                setAssignedRoles(vm.user, vm.roles);
+                                vm.client = result.data;
                             });
                     });
             }
 
             vm.save = function () {
-                var assingnedRoles = [];
-
-                for (var i = 0; i < vm.roles.length; i++) {
-                    var role = vm.roles[i];
-                    if (!role.isAssigned) {
-                        continue;
-                    }
-
-                    assingnedRoles.push(role.name);
-                }
-
-                vm.user.roleNames = assingnedRoles;
-                userService.update(vm.user)
+                clientService.updateClient(vm.client)
                     .then(function () {
                         abp.notify.info(App.localize('SavedSuccessfully'));
                         $uibModalInstance.close();
