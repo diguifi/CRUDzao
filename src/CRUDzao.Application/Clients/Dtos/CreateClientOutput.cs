@@ -9,6 +9,5 @@ namespace CRUDzao.Clients.Dtos
 {
     public class CreateClientOutput : EntityDto<long>
     {
-        //TODO: Ask Fabricio what exactly is this for
     }
 }
